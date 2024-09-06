@@ -1,0 +1,52 @@
+.login-container-center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container-center .formbox {
+    border: 1px solid gray;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formbox h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.formbox form {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form .form-field {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-size: 1.25rem;
+}
+
+.form-field input {
+    font-size: 1.25rem;
+    padding: .5rem;
+}
+
+form .btn {
+    padding: .75rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #0769aa;
+    color: white;
+}
+
+form .btn:hover {
+    background-color: #0d82cf;
+    cursor: pointer;
+}
