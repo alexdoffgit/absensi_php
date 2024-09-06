@@ -1,9 +1,27 @@
 RewriteEngine On
+
+# Allow access to the assets directory
+RewriteRule ^assets/ - [L]
+
+# Block access to specific directories
 RewriteRule ^src/ - [F,L]
 RewriteRule ^vendor/ - [F,L]
 RewriteRule ^layouts/ - [F,L]
 RewriteRule ^tests/ - [F,L]
 RewriteRule ^.git/ - [F,L]
+RewriteRule ^views/ - [F,L]
+
+RewriteBase /absensi_php/
+RewriteRule ^index\\.php$ - [L]
+
+# Rewrite rules to handle requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /absensi_php/index.php [L]
+
+# Allow access to specific file types
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico)$ [NC]
+
 
 <Files "composer.json">
     Order allow,deny
@@ -36,6 +54,11 @@ RewriteRule ^.git/ - [F,L]
 </Files>
 
 <Files ".env.example">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "README.txt">
     Order allow,deny
     Deny from all
 </Files>
