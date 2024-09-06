@@ -1,0 +1,41 @@
+RewriteEngine On
+RewriteRule ^src/ - [F,L]
+RewriteRule ^vendor/ - [F,L]
+RewriteRule ^layouts/ - [F,L]
+RewriteRule ^tests/ - [F,L]
+RewriteRule ^.git/ - [F,L]
+
+<Files "composer.json">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "composer.lock">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "phpunit.xml">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ".phpunit.result.cache">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ".gitignore">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ".env">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ".env.example">
+    Order allow,deny
+    Deny from all
+</Files>
