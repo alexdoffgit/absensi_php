@@ -1,10 +1,5 @@
 {
     "name": "alexdoff/absensix",
-    "autoload": {
-        "psr-4": {
-            "Alexdoff\\Absensix\\": "src/"
-        }
-    },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
