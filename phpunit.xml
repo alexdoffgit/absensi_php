@@ -1,7 +1,10 @@
 <phpunit>
     <testsuites>
-        <testsuite name="General Test Suite">
-            <directory>./tests</directory>
+        <testsuite name="Unit">
+            <directory>./tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Browser">
+            <directory>./tests/Browser</directory>
         </testsuite>
     </testsuites>
 </phpunit>
