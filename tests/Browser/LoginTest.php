@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Tests\Browser;
 
 use PHPUnit\Framework\TestCase;
 use Facebook\WebDriver\WebDriverBy;
@@ -13,7 +13,7 @@ class LoginTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->driver = Browser::getDriver();
+        $this->driver = Setup::getDriver();
     }
 
     public function test_login_header_exist()
@@ -31,6 +31,6 @@ class LoginTest extends TestCase
 
     public static function tearDownAfterClass(): void
     {
-        Browser::quitDriver();
+        Setup::quitDriver();
     }
 }

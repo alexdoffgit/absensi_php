@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests;
+namespace Tests\Browser;
 
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Firefox\FirefoxOptions;
 
-class Browser {
+class Setup {
     private static $driver;
 
     public static function getDriver() 
