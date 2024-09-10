@@ -12,7 +12,7 @@
     <div class="login-container-center">
         <div class="formbox">
             <h1>Login</h1>
-            <form action="/action/login.php" method="post">
+            <form action="/absensi_php/actions/login.php" method="post">
                 <div class="form-field">
                     <label for="fullname">Name</label>
                     <input type="text" name="fullname" id="fullname">
