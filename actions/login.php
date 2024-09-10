@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../');
         $dotenv->load();
     } catch (\Throwable $dotThrow) {
-        error_log($th->getMessage());
+        error_log($dotThrow->getMessage());
         header("Location: http://localhost/absensi_php/500.php");
         exit;
     }
